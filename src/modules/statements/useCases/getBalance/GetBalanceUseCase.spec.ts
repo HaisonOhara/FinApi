@@ -24,7 +24,6 @@ describe("User Balance", () => {
     };
     const user = await userRepositoryInMemory.create(userInput);
     const balance = await getBalanceUseCase.execute({ user_id: user.id });
-    console.log("BALANCE", balance);
 
     expect(balance).toHaveProperty("balance");
   });

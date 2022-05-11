@@ -43,7 +43,6 @@ describe("Get Statement Operation Use Case Test", () => {
       user_id: user.id,
       statement_id: statement.id,
     });
-    console.log("resultado", result);
 
     await expect(result).toHaveProperty("amount");
     expect(result.amount).toBe(200);
